@@ -1,0 +1,633 @@
+Certainly! Here’s a comprehensive documentation for your website, including all the necessary HTML, CSS, and JavaScript files.
+
+---
+
+## **Website Documentation**
+
+### **1. Overview**
+
+**Website Name**: Clever Steps
+
+**Purpose**: A web application to help users track their daily lessons, manage tasks, and review lesson notes and quizzes.
+
+---
+
+### **2. File Structure**
+
+- **index.html** - Landing Page
+- **home.html** - Home Page
+- **login.html** - Login Page
+- **signup.html** - Signup Page
+- **day.html** - Day Content Page
+- **lesson-notes.html** - Lesson Notes and Quiz Page
+- **styles.css** - Main Stylesheet
+- **scripts.js** - Main JavaScript File
+- **images/** - Directory for all image assets
+
+---
+
+### **3. `index.html` (Landing Page)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Steps - Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Clever Steps Logo">
+            <h1>Clever Steps</h1>
+        </div>
+    </header>
+    <section class="hero">
+        <img src="images/hero-landing.jpg" alt="Hero Image">
+        <h2>Welcome to Clever Steps!</h2>
+        <p>Your journey towards organized learning starts here.</p>
+        <a href="signup.html" class="btn">Get Started</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 Clever Steps. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### **4. `home.html` (Home Page)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Steps - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Clever Steps Logo">
+            <h1>Clever Steps</h1>
+        </div>
+    </header>
+    <section class="hero">
+        <img src="images/hero-home.jpg" alt="Hero Image">
+        <h2>Welcome Back!</h2>
+        <p>Here's your dashboard for managing your lessons and tasks.</p>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <img src="images/calendar-icon.png" alt="Calendar Icon">
+            <h3>Track Your Progress</h3>
+            <p>Stay on top of your daily tasks with our interactive calendar.</p>
+        </div>
+        <div class="feature">
+            <img src="images/lesson-icon.png" alt="Lesson Icon">
+            <h3>Learn and Review</h3>
+            <p>Access and review lesson content and notes easily.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Clever Steps. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### **5. `login.html` (Login Page)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Steps - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Clever Steps Logo">
+            <h1>Clever Steps</h1>
+        </div>
+    </header>
+    <section class="auth-form">
+        <h2>Login</h2>
+        <form action="home.html" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Clever Steps. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### **6. `signup.html` (Signup Page)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Steps - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Clever Steps Logo">
+            <h1>Clever Steps</h1>
+        </div>
+    </header>
+    <section class="auth-form">
+        <h2>Sign Up</h2>
+        <form action="login.html" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Clever Steps. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### **7. `day.html` (Day Content Page)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Steps - Day Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Clever Steps Logo">
+            <h1>Clever Steps</h1>
+        </div>
+    </header>
+    <section class="day-container">
+        <div class="day">
+            <div class="day-header">
+                <h2>Day 1: Introduction</h2>
+                <div class="date">2024-09-01</div>
+            </div>
+            <div class="day-content">
+                <p>Content for Day 1 goes here...</p>
+                <ul>
+                    <li><input type="checkbox" id="task1"><label for="task1">Complete Task 1</label></li>
+                    <li><input type="checkbox" id="task2"><label for="task2">Complete Task 2</label></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Clever Steps. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+```
+
+---
+
+### **8. `lesson-notes.html` (Lesson Notes and Quiz Page)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Steps - Lesson Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Clever Steps Logo">
+            <h1>Clever Steps</h1>
+        </div>
+    </header>
+    <section class="lesson-notes">
+        <h2>Lesson Notes for Day 1</h2>
+        <p>Detailed notes for the lesson will be provided here...</p>
+        <img src="images/lesson-content-1.jpg" alt="Lesson Content Image">
+        <div class="quiz">
+            <h3>Quiz</h3>
+            <form>
+                <label for="question1">Question 1:</label>
+                <input type="text" id="question1" name="question1" required>
+                <label for="question2">Question 2:</label>
+                <input type="text" id="question2" name="question2" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Clever Steps. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### **9. `styles.css`
+
+ (Main Stylesheet)**
+
+```css
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo img {
+    width: 100px;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    display: inline;
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature img {
+    width: 60px;
+}
+
+.auth-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form label {
+    margin: 10px 0 5px;
+}
+
+.auth-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 2px solid #ddd;
+}
+
+/* Day Page Styles */
+.day-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.day {
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.day-header {
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #007bff;
+}
+
+.day-header:hover {
+    border-color: #0056b3;
+}
+
+.day-header h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+    font-weight: 700;
+}
+
+.date {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.date .tick {
+    display: none;
+    margin-left: 5px;
+    font-size: 16px;
+    color: green;
+}
+
+/* Lesson Notes Page Styles */
+.lesson-notes {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.lesson-notes img {
+    width: 100%;
+    height: auto;
+}
+
+.quiz {
+    margin-top: 20px;
+}
+
+.quiz form {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz label {
+    margin: 10px 0 5px;
+}
+
+.quiz input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quiz button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.quiz button:hover {
+    background-color: #0056b3;
+}
+```
+
+---
+
+### **10. `scripts.js` (Main JavaScript File)**
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Function to load checkbox state from local storage
+    function loadCheckboxState() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            const isChecked = localStorage.getItem(checkbox.id) === 'true';
+            checkbox.checked = isChecked;
+            if (isChecked) {
+                checkbox.disabled = true; // Disable the checkbox if checked
+                checkbox.parentNode.style.textDecoration = 'line-through';
+            } else {
+                checkbox.parentNode.style.textDecoration = 'none';
+            }
+        });
+    }
+
+    // Function to save checkbox state to local storage
+    function saveCheckboxState() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            localStorage.setItem(checkbox.id, checkbox.checked);
+            if (checkbox.checked) {
+                checkbox.disabled = true; // Disable the checkbox if checked
+                checkbox.parentNode.style.textDecoration = 'line-through';
+            } else {
+                checkbox.parentNode.style.textDecoration = 'none';
+            }
+        });
+
+        // Update day colors after saving checkbox state
+        updateDayColors();
+    }
+
+    // Function to unlock days based on first login date
+    function unlockDays() {
+        let startDate = localStorage.getItem('startDate');
+        
+        // If start date is not set, set it to the current date
+        if (!startDate) {
+            const today = new Date();
+            startDate = today.toISOString().split('T')[0];
+            localStorage.setItem('startDate', startDate);
+        }
+        
+        const currentDate = new Date();
+        startDate = new Date(startDate);
+        const dayDifference = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+        const currentDay = dayDifference + 1; // Add 1 to count today as Day 1
+        
+        // Show only the days that should be unlocked
+        const days = document.querySelectorAll('.day');
+        days.forEach((day, index) => {
+            if (index < currentDay) {
+                day.style.display = 'block';
+                const dayDateElement = day.querySelector('.date');
+                if (dayDateElement) {
+                    const dayDate = new Date(startDate);
+                    dayDate.setDate(startDate.getDate() + index); // Increment date for each day
+                    dayDateElement.textContent = dayDate.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+                }
+            } else {
+                day.style.display = 'none';
+            }
+        });
+
+        // Update day colors
+        updateDayColors();
+    }
+
+    // Function to update the colors of the days based on their status
+    function updateDayColors() {
+        const days = document.querySelectorAll('.day');
+        const currentDate = new Date();
+        const todayIndex = Math.floor((currentDate - new Date(localStorage.getItem('startDate'))) / (1000 * 60 * 60 * 24));
+
+        days.forEach((day, index) => {
+            const checkboxes = day.querySelectorAll('input[type="checkbox"]');
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            const anyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+            if (index < todayIndex) {
+                // Completed days
+                day.style.backgroundColor = allChecked ? '#d4edda' : '#f8d7da'; // Green if completed, red if not
+            } else if (index === todayIndex) {
+                // Ongoing day
+                if (allChecked) {
+                    day.style.backgroundColor = '#d4edda'; // Green if all checkboxes are checked
+                } else {
+                    day.style.backgroundColor = '#fff3cd'; // Yellow otherwise
+                }
+            } else {
+                // Future days (locked)
+                day.style.backgroundColor = '#f9f9fb'; // Keep the default color
+            }
+        });
+    }
+
+    // Initialize the page
+    loadCheckboxState();
+    unlockDays();
+
+    // Add event listeners to save the state on change
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', saveCheckboxState);
+    });
+
+    // Add event listener for day headers to toggle content visibility
+    const dayHeaders = document.querySelectorAll('.day-header');
+    dayHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    // Update the colors of the
+
+ days on page load
+    updateDayColors();
+});
+```
+
+---
+
+### **11. Images**
+
+- **Logo**: `logo.png`
+- **Hero Images**: `hero-landing.jpg`, `hero-home.jpg`
+- **Feature Icons**: `calendar-icon.png`, `lesson-icon.png`
+- **Background Image**: `background-landing.jpg`
+- **Day-Specific Images**: `day-1.jpg`, `day-2.jpg`
+- **Lesson Content Images**: `lesson-content-1.jpg`, `lesson-content-2.png`
+- **Quiz Icons**: `quiz-icon.png`, `result-chart.png`
+
+---
+
+This documentation should provide a clear overview and detailed information to help you manage and maintain your website. If you have any specific questions or need further adjustments, feel free to ask!
